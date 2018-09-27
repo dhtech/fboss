@@ -8,11 +8,12 @@
  *
  */
 #include "fboss/agent/hw/bcm/BcmControlPlane.h"
+#include "fboss/agent/hw/bcm/BcmPortQueueManager.h"
 
 namespace facebook { namespace fboss {
 
 BcmControlPlane::BcmControlPlane(BcmSwitch* hw)
-  : hw_(hw), gport_(0), queue_manager_(hw, "", 0) {}
+  : hw_(hw), gport_(0), queueManager_(std::make_unique<BcmPortQueueManager>(hw, "", 0)) {}
 
 void BcmControlPlane::setupQueue(const std::shared_ptr<PortQueue>& /*queue*/) {}
 
