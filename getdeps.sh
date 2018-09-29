@@ -117,9 +117,9 @@ NPROC=$(grep -c processor /proc/cpuinfo)
     fi
     # iproute2 v4.4.0
     update https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git 7ca63aef7d1b0c808da0040c6b366ef7a61f38c1
-    update https://github.com/facebook/folly.git
-    update https://github.com/facebook/wangle.git
-    update https://github.com/facebook/fbthrift.git
+    update https://github.com/facebook/folly.git v2018.06.04.00
+    update https://github.com/facebook/wangle.git v2018.06.04.00
+    update https://github.com/facebook/fbthrift.git v2018.06.04.00
     update https://github.com/no1msd/mstch.git
     update https://github.com/facebook/zstd.git
     update https://github.com/google/googletest.git release-1.8.0
