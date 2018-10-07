@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    machine: {}
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: |
+            docker run --name fboss_build -v `pwd`:/tmp/code opennetworklinux/builder9:1.2 /bin/sh -c "g++ --version ; cd /tmp/code && bash getdeps.sh"
+            docker commit fboss_build fboss/tmp
+            docker run --name fboss_build_phase2 -v `pwd`:/tmp/code fboss/tmp /bin/sh -c "cd /tmp/code && mkdir build && cd build && cmake .. && make -j`grep -c processor /proc/cpuinfo`"
+            docker commit fboss_build_phase2 fboss/tmp2
+            mkdir /tmp/build/
+            cp -v build/{agent_test,cp2112_util,netlink_manager,qsfp_service,wedge_agent,wedge_qsfp_util} /tmp/build/
+      - store_artifacts:
+          path: /tmp/build/
+      - run:
+          name: Run tests
+          command: |
+            docker run --name fboss_build_phase3 -v `pwd`:/tmp/code fboss/tmp /bin/sh -c "cd /tmp/code/build && make test | cat"
+
