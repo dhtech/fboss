@@ -75,7 +75,7 @@ void BcmUnit::attach(bool warmBoot) {
     setenv(wbEnvVar, wbFlag, 1);
   }
 
-  opennsl_driver_init();
+  opennsl_driver_init(NULL);
 
   attached_.store(true, std::memory_order_release);
 }
