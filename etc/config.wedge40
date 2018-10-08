@@ -1,8 +1,7 @@
 
 rate_ext_mdio_divisor=0x65
 mdio_output_delay=0xb
-pbmp_xport_ge=0x000000000000000000000001e
-pbmp_xport_xe=0x1ffffffffffffffffffffffe0
+pbmp_xport_xe=0x1fffffffffffffffffffffffe
 pbmp_oversubscribe=0x1fffffffffffffffffffffffe
 l2_mem_entries=0x8000
 l3_intf_vlan_split_egress=0x1
@@ -20,7 +19,10 @@ serdes_firmware_mode_xe=0x2
 serdes_pre_driver_current_xe=0xa
 serdes_preemphasis_xe=0xcad0
 
-
+serdes_if_type_xe33=3
+serdes_if_type_xe34=3
+serdes_if_type_xe35=3
+serdes_if_type_xe36=3
 portmap_1=33:1
 portmap_2=34:1
 portmap_3=35:1

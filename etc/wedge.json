@@ -12,7 +12,7 @@
             "minFrameSize": 64,
             "parserType": 0,
             "routable": false,
-            "speed": 1000,
+            "speed": 0,
             "state": 2
         },
         {
@@ -22,7 +22,7 @@
             "minFrameSize": 64,
             "parserType": 0,
             "routable": false,
-            "speed": 1000,
+            "speed": 0,
             "state": 2
         },
         {
@@ -32,7 +32,7 @@
             "minFrameSize": 64,
             "parserType": 0,
             "routable": false,
-            "speed": 1000,
+            "speed": 0,
             "state": 2
         },
         {
@@ -42,7 +42,7 @@
             "minFrameSize": 64,
             "parserType": 0,
             "routable": false,
-            "speed": 1000,
+            "speed": 0,
             "state": 2
         },
         {
@@ -53,7 +53,9 @@
             "parserType": 0,
             "routable": false,
             "speed": 0,
-            "state": 2
+            "state": 2,
+	    "name": "XE5",
+	    "description": "Port 2, Lane 1"
         },
         {
             "ingressVlan": 552,
@@ -613,7 +615,9 @@
             "parserType": 0,
             "routable": false,
             "speed": 0,
-            "state": 2
+            "state": 2,
+	    "name": "XE61",
+	    "description": "Port 16, Lane 1"
         },
         {
             "ingressVlan": 552,
@@ -623,7 +627,9 @@
             "parserType": 0,
             "routable": false,
             "speed": 0,
-            "state": 2
+            "state": 2,
+	    "name": "XE62",
+	    "description": "Port 16, Lane 2"
         },
         {
             "ingressVlan": 552,
@@ -633,7 +639,9 @@
             "parserType": 0,
             "routable": false,
             "speed": 0,
-            "state": 2
+            "state": 2,
+	    "name": "XE63",
+	    "description": "Port 16, Lane 3"
         },
         {
             "ingressVlan": 552,
@@ -643,7 +651,9 @@
             "parserType": 0,
             "routable": false,
             "speed": 0,
-            "state": 2
+            "state": 2,
+	    "name": "XE64",
+	    "description": "Port 16, Lane 4"
         }
     ],
     "proactiveArp": false,
