@@ -20,8 +20,9 @@ BcmControlPlaneQueueManager::BcmControlPlaneQueueManager(
 
 std::shared_ptr<PortQueue> BcmControlPlaneQueueManager::getCurrentQueueSettings(
     cfg::StreamType /*streamType*/,
-    opennsl_cos_queue_t /*cosQ*/) const {
-  return std::shared_ptr<PortQueue>{};
+    opennsl_cos_queue_t cosQ) const {
+  // stub implementation - depends on newer OpenNSL
+  return std::make_shared<PortQueue>(cosQ);
 }
 
 void BcmControlPlaneQueueManager::program(
